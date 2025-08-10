@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'screens/standard_calculator_screen.dart';
 import 'screens/lump_sum_calculator_screen.dart';
+import 'screens/recurring_investment_calculator_screen.dart';
 
 // main 函式是我們 App 的入口點，就像房子的總開關
 void main() {
@@ -67,7 +68,10 @@ class MainMenuScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const RecurringInvestmentCalculatorScreen()),
+              );
               },
               child: const Text('定期定額終值計算機'),
             ),
