@@ -1,6 +1,7 @@
 // 引入 Flutter 的材料設計函式庫，這是我們所有 UI 元件的來源
 import 'package:flutter/material.dart';
 import 'screens/standard_calculator_screen.dart';
+import 'screens/lump_sum_calculator_screen.dart';
 
 // main 函式是我們 App 的入口點，就像房子的總開關
 void main() {
@@ -74,7 +75,10 @@ class MainMenuScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                // TODO: 導航到單筆終值計算機
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LumpSumCalculatorScreen()),
+                );
               },
               child: const Text('單筆終值計算機'),
             ),
