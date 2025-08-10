@@ -82,7 +82,7 @@ void _calculate() {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('定期定額終值計算'),
+        title: const Text('定期定額計算機'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: SingleChildScrollView(

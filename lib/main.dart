@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/standard_calculator_screen.dart';
 import 'screens/lump_sum_calculator_screen.dart';
 import 'screens/recurring_investment_calculator_screen.dart';
+import 'screens/loan_calculator_screen.dart';
 
 // main 函式是我們 App 的入口點，就像房子的總開關
 void main() {
@@ -73,7 +74,7 @@ class MainMenuScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const RecurringInvestmentCalculatorScreen()),
               );
               },
-              child: const Text('定期定額終值計算機'),
+              child: const Text('定期定額計算機'),
             ),
             const SizedBox(height: 20),
 
@@ -84,15 +85,18 @@ class MainMenuScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LumpSumCalculatorScreen()),
                 );
               },
-              child: const Text('單筆終值計算機'),
+              child: const Text('單筆投資計算機'),
             ),
             const SizedBox(height: 20),
 
             ElevatedButton(
               onPressed: () {
-                // TODO: 導航到貸款利率計算機
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoanCalculatorScreen()),
+                );
               },
-              child: const Text('貸款利率計算機'),
+              child: const Text('貸款計算機'),
             ),
           ],
         ),

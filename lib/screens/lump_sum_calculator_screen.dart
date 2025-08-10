@@ -55,7 +55,7 @@ class _LumpSumCalculatorScreenState extends State<LumpSumCalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('單筆終值計算'),
+        title: const Text('單筆投資計算機'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       // 【新概念】SingleChildScrollView:
