@@ -1,5 +1,6 @@
 // 引入 Flutter 的材料設計函式庫，這是我們所有 UI 元件的來源
 import 'package:flutter/material.dart';
+import 'screens/standard_calculator_screen.dart';
 
 // main 函式是我們 App 的入口點，就像房子的總開關
 void main() {
@@ -51,7 +52,13 @@ class MainMenuScreen extends StatelessWidget {
             // ElevatedButton 是一個有立體感的按鈕
             ElevatedButton(
               onPressed: () {
-                // TODO: 導航到一般計算機
+                                // 【新概念】Navigator.push：
+                // 這是 Flutter 的導航方法，像在書本上疊加一頁新的紙一樣，
+                // 將新的頁面 (StandardCalculatorScreen) 推到畫面上方。
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const StandardCalculatorScreen()),
+                );
               },
               child: const Text('一般計算機'),
             ),
@@ -59,7 +66,7 @@ class MainMenuScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                // TODO: 導航到定期定額計算機
+
               },
               child: const Text('定期定額終值計算機'),
             ),
